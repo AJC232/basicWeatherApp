@@ -9,8 +9,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.listen(3000, () => {
-    console.log("Server is listening...");
+const port = 5000;
+
+app.listen(process.env.PORT || port, () => {
+    console.log("Server is listening at https://localhost:${port}");
 });
 
 app.use(express.static('public'));
@@ -31,3 +33,4 @@ app.post('/result', (req,res) => {
       });
 });
 
+module.exports = app;
