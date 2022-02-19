@@ -9,9 +9,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-const port = 5000;
-
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT, () => {
     console.log("Server is listening at https://localhost:${port}");
 });
 
