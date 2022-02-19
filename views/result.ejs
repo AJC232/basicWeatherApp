@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="resultStyle.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Weather-App</h1>
+    </div>
+    <div class="info">
+        <ul class="location">
+            <h2>Location info</h2>
+            <li>Location:  <%= loc.name %></li>
+            <li>Latitude:  <%= loc.lat %></li>
+            <li>Longitude:  <%= loc.long %></li>
+            <li>Timezone:  <%= loc.timezone %></li>
+        </ul>
+        <ul class="current">
+            <h2>Current info</h2>
+            <li>Date: <%= cur.date %></li>
+            <li>Day:  <%= cur.day %></li>
+            <li>Temperature:  <%= cur.temperature %> C</li>
+            <li>Feels like Temperature:  <%= cur.feelslike %> C</li>
+            <li>Sky:  <%= cur.skytext %></li>
+            <li>Humidity:  <%= cur.humidity %></li>
+            <li>Wind Speed & Direction:  <%= cur.winddisplay %></li>
+        </ul>
+    </div>
+    <h2>Forecast info</h2>
+    <div class="forecast">
+        
+       <% fore.forEach(fore => { %> 
+        <ul class= <%= fore.day %>>
+            <li>Date: <%= fore.date %></li>
+            <li>Day: <%= fore.day %></li>
+            <li>Min-Temperature: <%= fore.low %> C</li>
+            <li>Max-Temperature: <%= fore.high %> C</li>
+            <li>Sky:  <%= fore.skytextday %></li>
+        </ul>
+       <%})%>
+    </div>
+    <div class="createdBy">
+        <h3>Created by: Adityasinh Chauhan</h3>
+    </div>
+</body>
+</html>

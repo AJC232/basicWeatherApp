@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito&family=Oswald&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: nunito;
+    background: lavender;
+}
+.header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: lightblue;
+}
+.header h1{
+    font-size: 3em;
+    font-weight: 700;
+    padding-left: 2.5%;
+    background: lightblue;
+}
+.form {
+    width: 100%;
+    height: 100%;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10em;
+}
+.form form input{
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 12px;
+    border-radius: 25px;
+    border-style: none;
+    background: white; 
+}
+#submit{
+    width: 10%;
+    height: 45px;
+    padding-left: 0;
+}
+.createdBy{
+    text-align: right;
+    margin-top: 250px;
+}
+@media(max-width: 600px){
+    .header{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+    }
+    .header h1{
+        font-size: 2em;
+    }
+    .form form input{
+        width: 90%;
+    }
+    #submit{
+        width: 50%;
+    }
+    .createdBy{
+        margin-top: 280px;
+    }
+}
